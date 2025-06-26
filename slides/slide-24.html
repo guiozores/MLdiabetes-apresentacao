@@ -1,3 +1,4 @@
+<!-- Slide 39 – Resultados de Treinamento (Parte IV)  -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -5,26 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slide 24 - Resultados de Treinamento</title>
     <link rel="stylesheet" href="../global.css" />
-    <link rel="stylesheet" href="slide-24.css" />
+    <link rel="stylesheet" href="slide-26.css" />
+
+    <!-- Sistema Universal de Zoom -->
+    <script src="../zoom-simple.js"></script>
   </head>
   <body>
+    <div class="slide-counter">24/30</div>
     <div class="presentation-container">
       <div class="slide-content">
         <h2 class="slide-title">Resultados de Treinamento</h2>
-        <h3 class="slide-subtitle">Análise de Performance - Parte&nbsp;II</h3>
+        <h3 class="slide-subtitle">Análise de Performance - Parte II</h3>
 
         <div class="main-content">
+          <!-- IMAGEM + ZOOM -->
           <div class="image-section">
             <div class="image-container">
               <div class="image-wrapper">
                 <img
-                  src="../assets/RESULT-TREINA-02.png"
-                  alt="Curvas ROC – ranking de performance"
+                  src="../assets/SLIDE26.png"
+                  alt="AUC e CV-5"
                   class="main-image"
-                  id="zoomableImage"
+                  data-zoom-enabled="true"
+                  data-zoom-factor="2.0"
+                  data-lens-shape="rectangle"
+                  data-lens-width="320"
+                  data-lens-height="180"
+                  data-zoom-box-width="980"
+                  data-zoom-box-height="576"
                 />
-                <div class="zoom-lens" id="zoomLens"></div>
-                <div class="zoom-result" id="zoomResult"></div>
               </div>
               <p class="image-source">Fonte: elaborado pelo autor</p>
               <p class="zoom-instruction">
@@ -34,24 +44,21 @@
             </div>
           </div>
 
+          <!-- DESCRIÇÃO -->
           <div class="description-section">
             <div class="description-content">
               <div class="description-item">
                 <span class="description-bullet">•</span>
                 <p>
-                  <strong>Ranking por AUC:</strong> AdaBoost (0,842), Gradient
-                  Boosting (0,821), Random&nbsp;Forest (0,817) e Regressão
-                  Logística (0,815) superam a linha de excelência (AUC ≥ 0,80),
-                  confirmando a forte capacidade de discriminação dos melhores
-                  modelos.
+                  <strong>AUC:</strong> Área sob a curva ROC, métrica de
+                  desempenho para classificação.
                 </p>
               </div>
               <div class="description-item">
                 <span class="description-bullet">•</span>
                 <p>
-                  <strong>Modelos descartados:</strong> kNN, Decision Tree e
-                  Naive Bayes (AUC &lt; 0,75) exibem baixo poder discriminativo
-                  e não avançam para a otimização de thresholds.
+                  <strong>CV-5:</strong> Validação cruzada com 5 folds, avalia
+                  estabilidade do modelo.
                 </p>
               </div>
             </div>
@@ -59,6 +66,7 @@
         </div>
       </div>
 
+      <!-- NAVEGAÇÃO -->
       <div class="navigation">
         <a href="slide-23.html" class="nav-button">← Anterior</a>
         <a href="../index.html" class="nav-button">Menu</a>

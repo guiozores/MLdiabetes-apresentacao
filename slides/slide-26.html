@@ -1,76 +1,111 @@
-<!-- Slide 39 – Resultados de Treinamento (Parte IV)  -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slide 26 - Resultados de Treinamento</title>
+    <title>Slide 26 - Perfis Sintéticos para Validação</title>
     <link rel="stylesheet" href="../global.css" />
-    <link rel="stylesheet" href="slide-26.css" />
-
-    <!-- Sistema Universal de Zoom -->
-    <script src="../zoom-simple.js"></script>
+    <link rel="stylesheet" href="slide-28.css" />
   </head>
   <body>
+    <div class="slide-counter">26/30</div>
     <div class="presentation-container">
       <div class="slide-content">
-        <h2 class="slide-title">Resultados de Treinamento</h2>
-        <h3 class="slide-subtitle">Análise de Performance - Parte IV</h3>
+        <h2 class="slide-title">Análise Qualitativa</h2>
+        <h3 class="slide-subtitle">Perfis Sintéticos para Validação</h3>
 
-        <div class="main-content">
-          <!-- IMAGEM + ZOOM -->
-          <div class="image-section">
-            <div class="image-container">
-              <div class="image-wrapper">
-                <img
-                  src="../assets/RESULT-TREINA-04.png"
-                  alt="Painel completo de métricas de performance"
-                  class="main-image"
-                  data-zoom-enabled="true"
-                  data-zoom-factor="2.0"
-                  data-lens-shape="rectangle"
-                  data-lens-width="320"
-                  data-lens-height="180"
-                  data-zoom-box-width="980"
-                  data-zoom-box-height="576"
-                />
-              </div>
-              <p class="image-source">Fonte: elaborado pelo autor</p>
-              <p class="zoom-instruction">
-                💡 Clique na imagem para ativar o zoom; clique novamente para
-                desativar.
-              </p>
-            </div>
+        <div class="synthetic-profiles">
+          <div class="intro-text">
+            <p>
+              Para validação dos modelos, foram criados
+              <strong>6 perfis sintéticos</strong>
+              representando um espectro contínuo de risco para diabetes. Estes
+              perfis serão utilizados posteriormente para análise de
+              plausibilidade dos modelos gerados.
+            </p>
           </div>
 
-          <!-- DESCRIÇÃO -->
-          <div class="description-section">
-            <div class="description-content">
-              <div class="description-item">
-                <span class="description-bullet">•</span>
-                <p>
-                  <strong>Panorama de métricas:</strong> Gradient&nbsp;Boosting
-                  lidera em F1-Score e Precisão; AdaBoost apresenta o maior
-                  Recall; SVM destaca-se na Specificity; Random&nbsp;Forest
-                  alcança a melhor robustez em CV-5 (AUC = 0,909).
-                </p>
-              </div>
-              <div class="description-item">
-                <span class="description-bullet">•</span>
-                <p>
-                  <strong>Estabilidade vs desempenho:</strong> o gráfico
-                  "AUC&nbsp;Teste × CV-5" confirma a consistência de
-                  Random&nbsp;Forest e Gradient&nbsp;Boosting (pontos próximos à
-                  linha ideal), enquanto Decision&nbsp;Tree evidencia
-                  sobreajuste e é desclassificado.
-                </p>
-              </div>
+          <div class="profiles-table">
+            <div class="table-header">
+              <div class="header-cell">Perfil de Risco</div>
+              <div class="header-cell">Pregnancies</div>
+              <div class="header-cell">Glucose</div>
+              <div class="header-cell">Blood Pressure</div>
+              <div class="header-cell">Skin Thickness</div>
+              <div class="header-cell">BMI</div>
+              <div class="header-cell">DPF</div>
+              <div class="header-cell">Age</div>
+            </div>
+
+            <div class="table-row severe">
+              <div class="cell profile-name">Diabético Severo</div>
+              <div class="cell">4</div>
+              <div class="cell">200</div>
+              <div class="cell">100</div>
+              <div class="cell">50</div>
+              <div class="cell">40.0</div>
+              <div class="cell">1.50</div>
+              <div class="cell">65</div>
+            </div>
+
+            <div class="table-row moderate">
+              <div class="cell profile-name">Diabético Moderado</div>
+              <div class="cell">2</div>
+              <div class="cell">160</div>
+              <div class="cell">85</div>
+              <div class="cell">35</div>
+              <div class="cell">32.0</div>
+              <div class="cell">0.80</div>
+              <div class="cell">50</div>
+            </div>
+
+            <div class="table-row pre-high">
+              <div class="cell profile-name">Pré-Diabético Alto</div>
+              <div class="cell">4</div>
+              <div class="cell">124</div>
+              <div class="cell">78</div>
+              <div class="cell">30</div>
+              <div class="cell">31.0</div>
+              <div class="cell">0.60</div>
+              <div class="cell">45</div>
+            </div>
+
+            <div class="table-row pre-low">
+              <div class="cell profile-name">Pré-Diabético Baixo</div>
+              <div class="cell">2</div>
+              <div class="cell">115</div>
+              <div class="cell">75</div>
+              <div class="cell">25</div>
+              <div class="cell">30.0</div>
+              <div class="cell">0.40</div>
+              <div class="cell">40</div>
+            </div>
+
+            <div class="table-row low-risk">
+              <div class="cell profile-name">Risco Baixo</div>
+              <div class="cell">0</div>
+              <div class="cell">99</div>
+              <div class="cell">70</div>
+              <div class="cell">22</div>
+              <div class="cell">29.0</div>
+              <div class="cell">0.30</div>
+              <div class="cell">35</div>
+            </div>
+
+            <div class="table-row healthy">
+              <div class="cell profile-name">Saudável</div>
+              <div class="cell">0</div>
+              <div class="cell">85</div>
+              <div class="cell">65</div>
+              <div class="cell">18</div>
+              <div class="cell">22.0</div>
+              <div class="cell">0.15</div>
+              <div class="cell">25</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- NAVEGAÇÃO -->
       <div class="navigation">
         <a href="slide-25.html" class="nav-button">← Anterior</a>
         <a href="../index.html" class="nav-button">Menu</a>

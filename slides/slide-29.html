@@ -3,86 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slide 29 - Teste em Perfis Sintéticos</title>
+    <title>Slide 29 - Recomendações e Trabalhos Futuros</title>
     <link rel="stylesheet" href="../global.css" />
-    <link rel="stylesheet" href="slide-29.css" />
+    <link rel="stylesheet" href="slide-31.css" />
   </head>
-
   <body>
+    <div class="slide-counter">29/30</div>
     <div class="presentation-container">
       <div class="slide-content">
-        <h2 class="slide-title">Validação Qualitativa</h2>
-        <h3 class="slide-subtitle">6 Perfis de Pacientes – Threshold 0,4</h3>
+        <h2 class="slide-title">Recomendações e Trabalhos Futuros</h2>
+        <h3 class="slide-subtitle">
+          Diretrizes para Evolução e Aplicabilidade
+        </h3>
 
         <div class="main-content">
-          <div class="image-section">
-            <div class="image-container">
-              <div class="image-wrapper">
-                <img
-                  src="../assets/OTIMIZA-07.png"
-                  alt="Probabilidade predita para os 6 perfis sintéticos"
-                  class="main-image"
-                  data-zoom-enabled="true"
-                  data-zoom-factor="2.0"
-                  data-lens-shape="rectangle"
-                  data-lens-width="213"
-                  data-lens-height="243"
-                  data-zoom-box-width="460"
-                  data-zoom-box-height="520"
-                />
+          <div class="intro-section">
+            <div class="intro-card">
+              <div class="intro-text">
+                <p>
+                  Com base nos achados e visando a
+                  <strong>evolução e aplicabilidade</strong> do projeto,
+                  apresentamos as seguintes diretrizes estratégicas:
+                </p>
               </div>
-              <p class="image-source">Fonte: elaborado pelo autor</p>
             </div>
           </div>
 
-          <!-- INSIGHTS PRINCIPAIS -->
-          <div class="description-section">
-            <div class="description-content">
-              <div class="description-item">
-                <span class="description-bullet">•</span>
-                <p>
-                  <strong>AdaBoost superestima risco:</strong> atribui
-                  probabilidade &gt; 0,55 a quase todos os perfis—incluindo
-                  "Saudável" (0,29)—comprometendo a utilidade clínica.
-                </p>
+          <div class="recommendations-grid">
+            <div class="recommendation-card priority-high">
+              <div class="priority-badge">PRIORIDADE ALTA</div>
+              <div class="card-header">
+                <div class="card-number">1</div>
+                <h4>Conjunto de Dados Nacional</h4>
               </div>
-
-              <div class="description-item">
-                <span class="description-bullet">•</span>
+              <div class="card-content">
                 <p>
-                  <strong>Gradient Boosting falha no extremo:</strong>
-                  classifica o perfil "Diabético Severo" abaixo do limiar
-                  (0,013), demonstrando risco de subdiagnóstico crítico.
+                  <strong>Objetivo:</strong> Desenvolver triagem clínica
+                  abrangente com perfis demográficos brasileiros
                 </p>
+                <div class="benefit-list">
+                  <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Maior fidelidade à realidade nacional</span>
+                  </div>
+                  <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Modelos específicos para população brasileira</span>
+                  </div>
+                </div>
               </div>
+            </div>
 
-              <div class="description-item">
-                <span class="description-bullet">•</span>
+            <div class="recommendation-card priority-medium">
+              <div class="priority-badge">PRIORIDADE MÉDIA</div>
+              <div class="card-header">
+                <div class="card-number">2</div>
+                <h4>Validação Clínica</h4>
+              </div>
+              <div class="card-content">
                 <p>
-                  <strong>Random Forest apresenta "escada" coerente:</strong>
-                  probabilidades decrescem monotonicamente do perfil severo
-                  (0,607) até o saudável (0,020), refletindo gradiente clínico
-                  esperado.
+                  <strong>Objetivo:</strong> Validar modelo Random Forest e
+                  Regressão Logística em ambiente clínico real
                 </p>
+                <div class="benefit-list">
+                  <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Verificação da aplicabilidade prática</span>
+                  </div>
+                  <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Ferramenta de triagem validada</span>
+                  </div>
+                </div>
               </div>
+            </div>
 
-              <div class="description-item">
-                <span class="description-bullet">•</span>
+            <div class="recommendation-card priority-medium">
+              <div class="priority-badge">OTIMIZAÇÃO</div>
+              <div class="card-header">
+                <div class="card-number">3</div>
+                <h4>Hiperparâmetros Avançados</h4>
+              </div>
+              <div class="card-content">
                 <p>
-                  <strong>Regressão Logística também consistente:</strong>
-                  separação clara dos seis níveis de risco, embora o intervalo
-                  dinâmico seja mais estreito; modelo leve e interpretável—bom
-                  candidato para ajuste fino futuro.
+                  <strong>Objetivo:</strong> Busca aprofundada para Random
+                  Forest e Regressão Logística
                 </p>
+                <div class="benefit-list">
+                  <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Refinamento da performance</span>
+                  </div>
+                  <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Maximização da precisão preditiva</span>
+                  </div>
+                </div>
               </div>
+            </div>
 
-              <div class="description-item">
-                <span class="description-bullet">•</span>
+            <div class="recommendation-card priority-high">
+              <div class="priority-badge">IMPACTO SOCIAL</div>
+              <div class="card-header">
+                <div class="card-number">4</div>
+                <h4>Rastreamento Populacional</h4>
+              </div>
+              <div class="card-content">
                 <p>
-                  <strong>Consenso &amp; variabilidade:</strong> gráfico de
-                  desvio-padrão indica alta concordância entre modelos apenas
-                  nos extremos; Random Forest exibe melhor equilíbrio entre
-                  acurácia estatística e plausibilidade clínica.
+                  <strong>Objetivo:</strong> Ferramenta de baixo custo para
+                  rastreamento em massa
+                </p>
+                <div class="benefit-list">
+                  <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Prevenção em larga escala</span>
+                  </div>
+                  <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Saúde pública democratizada</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="final-message">
+            <div class="message-content">
+              <div class="message-icon">🎯</div>
+              <div class="message-text">
+                <h4>Contribuição Fundamental</h4>
+                <p>
+                  Este estudo estabelece a
+                  <strong>primazia da validação clínica</strong> sobre métricas
+                  puramente estatísticas, um passo essencial na construção de
+                  <strong>soluções de IA responsáveis para a saúde</strong>.
                 </p>
               </div>
             </div>
@@ -90,20 +144,11 @@
         </div>
       </div>
 
-      <!-- NAVEGAÇÃO -->
       <div class="navigation">
         <a href="slide-28.html" class="nav-button">← Anterior</a>
-        <a href="../index.html" class="nav-button">Menu</a>
+        <a href="../index.html" class="nav-button">Índice</a>
         <a href="slide-30.html" class="nav-button">Próximo →</a>
       </div>
     </div>
-
-    <!-- respiro extra -->
-    <style>
-      .description-content {
-        margin-bottom: 60px;
-      }
-    </style>
-    <script src="../zoom-simple.js"></script>
   </body>
 </html>

@@ -3,108 +3,130 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slide 47a - Perfis Sintéticos para Validação</title>
+    <title>Slide 28 – Conclusões</title>
     <link rel="stylesheet" href="../global.css" />
-    <link rel="stylesheet" href="slide-28.css" />
+    <link rel="stylesheet" href="slide-30.css" />
   </head>
+
   <body>
+    <div class="slide-counter">28/30</div>
     <div class="presentation-container">
       <div class="slide-content">
-        <h2 class="slide-title">Análise Qualitativa</h2>
-        <h3 class="slide-subtitle">Perfis Sintéticos para Validação</h3>
+        <h2 class="slide-title">Conclusões</h2>
+        <h3 class="slide-subtitle">Síntese dos Principais Achados</h3>
 
-        <div class="synthetic-profiles">
-          <div class="intro-text">
-            <p>
-              Para validação dos modelos, foram criados
-              <strong>6 perfis sintéticos</strong>
-              representando um espectro contínuo de risco para diabetes. Estes
-              perfis serão utilizados posteriormente para análise de
-              plausibilidade dos modelos gerados.
-            </p>
+        <div class="main-content">
+          <!-- BANNER OBJETIVO -->
+          <div class="objectives-section">
+            <div class="achievement-banner">
+              <div class="banner-icon">🎯</div>
+              <div class="banner-text">
+                <h4>Objetivo Alcançado</h4>
+                <p>
+                  O trabalho atingiu seu <strong>objetivo geral</strong> e
+                  <strong>específicos</strong> ao gerar um modelo de
+                  <strong>machine learning</strong> para predição de risco de
+                  diabetes.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div class="profiles-table">
-            <div class="table-header">
-              <div class="header-cell">Perfil de Risco</div>
-              <div class="header-cell">Pregnancies</div>
-              <div class="header-cell">Glucose</div>
-              <div class="header-cell">Blood Pressure</div>
-              <div class="header-cell">Skin Thickness</div>
-              <div class="header-cell">BMI</div>
-              <div class="header-cell">DPF</div>
-              <div class="header-cell">Age</div>
+          <!-- GRID CONCLUSÕES -->
+          <div class="conclusions-grid">
+            <!-- CARD 2 -->
+            <div class="conclusion-card secondary">
+              <div class="card-header">
+                <div class="card-icon">🧪</div>
+                <h4>Metodologia e Pré-processamento</h4>
+              </div>
+              <div class="card-content" style="text-align: justify">
+                <p>
+                  Foram testadas
+                  <strong>técnicas complexas de pré-processamento</strong>
+                  (imputação, exclusão, normalização, balanceamento), mas a
+                  introdução de ruídos e valores artificiais não garantiu
+                  desempenho superior aos dados brutos com modelos robustos.
+                </p>
+                <div class="highlight-box">
+                  <span class="highlight-label">Mensagem-chave</span>
+                  <p style="text-align: justify">
+                    Pré-processamento
+                    <span style="color: red; font-weight: bold">≠</span> melhor
+                    performance e pode trazer riscos enormes de
+                    <strong>overfitting</strong>.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="table-row severe">
-              <div class="cell profile-name">Diabético Severo</div>
-              <div class="cell">4</div>
-              <div class="cell">200</div>
-              <div class="cell">100</div>
-              <div class="cell">50</div>
-              <div class="cell">40.0</div>
-              <div class="cell">1.50</div>
-              <div class="cell">65</div>
+            <!-- CARD 3 -->
+            <div class="conclusion-card tertiary">
+              <div class="card-header">
+                <div class="card-icon">🔍</div>
+                <h4>Análise Qualitativa: Simulação de Perfis</h4>
+              </div>
+              <div class="card-content" style="text-align: justify">
+                <p>
+                  A <strong>análise qualitativa</strong> foi crucial: a
+                  simulação com perfis de pacientes revelou que
+                  <strong>métricas quantitativas podem ser enganosas</strong>.
+                  Ferramentas de simulação permitiram desqualificar modelos de
+                  alto risco que, apenas pelas métricas, seriam considerados
+                  promissores.
+                </p>
+                <div class="highlight-box">
+                  <span class="highlight-label">Diferencial</span>
+                  <p style="text-align: justify">
+                    Plausibilidade clínica + métricas ⇒ seleção segura.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="table-row moderate">
-              <div class="cell profile-name">Diabético Moderado</div>
-              <div class="cell">2</div>
-              <div class="cell">160</div>
-              <div class="cell">85</div>
-              <div class="cell">35</div>
-              <div class="cell">32.0</div>
-              <div class="cell">0.80</div>
-              <div class="cell">50</div>
-            </div>
-
-            <div class="table-row pre-high">
-              <div class="cell profile-name">Pré-Diabético Alto</div>
-              <div class="cell">4</div>
-              <div class="cell">124</div>
-              <div class="cell">78</div>
-              <div class="cell">30</div>
-              <div class="cell">31.0</div>
-              <div class="cell">0.60</div>
-              <div class="cell">45</div>
-            </div>
-
-            <div class="table-row pre-low">
-              <div class="cell profile-name">Pré-Diabético Baixo</div>
-              <div class="cell">2</div>
-              <div class="cell">115</div>
-              <div class="cell">75</div>
-              <div class="cell">25</div>
-              <div class="cell">30.0</div>
-              <div class="cell">0.40</div>
-              <div class="cell">40</div>
-            </div>
-
-            <div class="table-row low-risk">
-              <div class="cell profile-name">Risco Baixo</div>
-              <div class="cell">0</div>
-              <div class="cell">99</div>
-              <div class="cell">70</div>
-              <div class="cell">22</div>
-              <div class="cell">29.0</div>
-              <div class="cell">0.30</div>
-              <div class="cell">35</div>
-            </div>
-
-            <div class="table-row healthy">
-              <div class="cell profile-name">Saudável</div>
-              <div class="cell">0</div>
-              <div class="cell">85</div>
-              <div class="cell">65</div>
-              <div class="cell">18</div>
-              <div class="cell">22.0</div>
-              <div class="cell">0.15</div>
-              <div class="cell">25</div>
+            <!-- CARD 4: Modelo de Referência -->
+            <div class="conclusion-card">
+              <div class="card-header">
+                <div class="card-icon">🏆</div>
+                <h4>Modelo de Referência</h4>
+              </div>
+              <div class="card-content" style="text-align: justify">
+                <p>
+                  A escolha por utilizar <strong>dados brutos</strong> aliados a
+                  modelos robustos (como o Random Forest) superou pipelines de
+                  pré-processamento sofisticados, evitando ruído, artefatos e,
+                  principalmente, <strong>evitando overfitting</strong> com o
+                  pré-tratamento empregado. Essa abordagem garantiu maior
+                  generalização e segurança na aplicação prática do modelo.
+                </p>
+                <div class="highlight-box">
+                  <span class="highlight-label">Status</span>
+                  <p style="text-align: justify">
+                    Random Forest (threshold 0,4) apresentou o melhor gradiente
+                    de risco e robustez, estando pronto para validação clínica.
+                    A Regressão Logística permanece como alternativa para
+                    ajustes futuros.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <!-- Banner Limitação Crítica -->
+        <div class="limitation-banner">
+          <div class="limitation-banner-title-row">
+            <span class="limitation-icon">⚠️</span>
+            <span class="limitation-title">Limitação Crítica</span>
+          </div>
+          <span class="limitation-text">
+            A base <strong>PIMA Indians</strong> foi fundamental para o
+            desenvolvimento, mas apresenta limitações: não representa a
+            população brasileira, restringindo a generalização dos resultados.
+          </span>
+        </div>
       </div>
 
+      <!-- NAVEGAÇÃO -->
       <div class="navigation">
         <a href="slide-27.html" class="nav-button">← Anterior</a>
         <a href="../index.html" class="nav-button">Menu</a>
