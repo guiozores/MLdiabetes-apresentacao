@@ -3,76 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slide 30 - Estratificação dos Dados</title>
+    <title>Slide 30 – Conclusões</title>
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="slide-30.css" />
   </head>
+
   <body>
     <div class="presentation-container">
       <div class="slide-content">
-        <h2 class="slide-title">Pré-processamento de Dados</h2>
-        <h3 class="slide-subtitle">Estratificação dos Dados</h3>
+        <h2 class="slide-title">Conclusões</h2>
+        <h3 class="slide-subtitle">Síntese dos Principais Achados</h3>
 
-        <div class="stratification-container">
-          <div class="description-section">
-            <p class="stratification-description">
-              Divisão estratificada para garantir a representatividade das
-              classes em cada conjunto
-            </p>
-          </div>
-
-          <div class="stratification-visual">
-            <div class="stratification-bar">
-              <div class="train-section">
-                <div class="section-label">Treinamento</div>
-                <div class="section-percentage">60%</div>
-              </div>
-              <div class="validation-section">
-                <div class="section-label">Validação</div>
-                <div class="section-percentage">20%</div>
-              </div>
-              <div class="test-section">
-                <div class="section-label">Teste</div>
-                <div class="section-percentage">20%</div>
+        <div class="main-content">
+          <!-- BANNER OBJETIVO -->
+          <div class="objectives-section">
+            <div class="achievement-banner">
+              <div class="banner-icon">🎯</div>
+              <div class="banner-text">
+                <h4>Objetivo Alcançado</h4>
+                <p>
+                  O trabalho atingiu seu <strong>objetivo geral</strong> e
+                  <strong>específicos</strong> ao gerar um modelo de
+                  <strong>machine learning</strong> para predição de risco de
+                  diabetes.
+                </p>
               </div>
             </div>
           </div>
 
-          <div class="stratification-details">
-            <div class="detail-item">
-              <div class="detail-icon train-icon">📚</div>
-              <div class="detail-content">
-                <h4>Conjunto de Treinamento</h4>
+          <!-- GRID CONCLUSÕES -->
+          <div class="conclusions-grid">
+            <!-- CARD 2 -->
+            <div class="conclusion-card secondary">
+              <div class="card-header">
+                <div class="card-icon">🧪</div>
+                <h4>Metodologia e Pré-processamento</h4>
+              </div>
+              <div class="card-content" style="text-align: justify">
                 <p>
-                  60% dos dados para treinamento dos modelos, mantendo a
-                  proporção das classes
+                  Foram testadas
+                  <strong>técnicas complexas de pré-processamento</strong>
+                  (imputação, exclusão, normalização, balanceamento), mas a
+                  introdução de ruídos e valores artificiais não garantiu
+                  desempenho superior aos dados brutos com modelos robustos.
                 </p>
+                <div class="highlight-box">
+                  <span class="highlight-label">Mensagem-chave</span>
+                  <p style="text-align: justify">
+                    Pré-processamento
+                    <span style="color: red; font-weight: bold">≠</span> melhor
+                    performance e pode trazer riscos enormes de
+                    <strong>overfitting</strong>.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div class="detail-item">
-              <div class="detail-icon validation-icon">🔍</div>
-              <div class="detail-content">
-                <h4>Conjunto de Validação</h4>
+            <!-- CARD 3 -->
+            <div class="conclusion-card tertiary">
+              <div class="card-header">
+                <div class="card-icon">🔍</div>
+                <h4>Análise Qualitativa: Simulação de Perfis</h4>
+              </div>
+              <div class="card-content" style="text-align: justify">
                 <p>
-                  20% dos dados para validação e otimização de hiperparâmetros
+                  A <strong>análise qualitativa</strong> foi crucial: a
+                  simulação com perfis de pacientes revelou que
+                  <strong>métricas quantitativas podem ser enganosas</strong>.
+                  Ferramentas de simulação permitiram desqualificar modelos de
+                  alto risco que, apenas pelas métricas, seriam considerados
+                  promissores.
                 </p>
+                <div class="highlight-box">
+                  <span class="highlight-label">Diferencial</span>
+                  <p style="text-align: justify">
+                    Plausibilidade clínica + métricas ⇒ seleção segura.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div class="detail-item">
-              <div class="detail-icon test-icon">✅</div>
-              <div class="detail-content">
-                <h4>Conjunto de Teste</h4>
+            <!-- CARD 4: Modelo de Referência -->
+            <div class="conclusion-card">
+              <div class="card-header">
+                <div class="card-icon">🏆</div>
+                <h4>Modelo de Referência</h4>
+              </div>
+              <div class="card-content" style="text-align: justify">
                 <p>
-                  20% dos dados para avaliação final e medição de performance
+                  A escolha por utilizar <strong>dados brutos</strong> aliados a
+                  modelos robustos (como o Random Forest) superou pipelines de
+                  pré-processamento sofisticados, evitando ruído, artefatos e,
+                  principalmente, <strong>evitando overfitting</strong> com o
+                  pré-tratamento empregado. Essa abordagem garantiu maior
+                  generalização e segurança na aplicação prática do modelo.
                 </p>
+                <div class="highlight-box">
+                  <span class="highlight-label">Status</span>
+                  <p style="text-align: justify">
+                    Random Forest (threshold 0,4) apresentou o melhor gradiente
+                    de risco e robustez, estando pronto para validação clínica.
+                    A Regressão Logística permanece como alternativa para
+                    ajustes futuros.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- Banner Limitação Crítica -->
+        <div class="limitation-banner">
+          <div class="limitation-banner-title-row">
+            <span class="limitation-icon">⚠️</span>
+            <span class="limitation-title">Limitação Crítica</span>
+          </div>
+          <span class="limitation-text">
+            A base <strong>PIMA Indians</strong> foi fundamental para o
+            desenvolvimento, mas apresenta limitações: não representa a
+            população brasileira, restringindo a generalização dos resultados.
+          </span>
+        </div>
       </div>
 
+      <!-- NAVEGAÇÃO -->
       <div class="navigation">
         <a href="slide-29.html" class="nav-button">← Anterior</a>
         <a href="../index.html" class="nav-button">Menu</a>

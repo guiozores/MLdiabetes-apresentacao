@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slide 6 - Abordagem Metodológica | Além das Métricas</title>
+    <title>Slide 6 - Pipeline de Preparação | Além das Métricas</title>
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="slide-6.css" />
   </head>
@@ -11,23 +11,154 @@
     <div class="presentation-container">
       <div class="slide">
         <div class="slide-content">
-          <h2 class="slide-title">Metodologia</h2>
+          <h2 class="slide-title">Fase 2: Pipeline de Preparação dos Dados</h2>
 
-          <div class="methodology-content">
-            <div class="method-description">
-              <p class="method-subtitle">CRISP-DM Adaptado</p>
+          <div class="pipeline-content">
+            <h3 class="pipeline-subtitle">
+              Pipeline Metodológico de Preparação
+            </h3>
+
+            <div class="pipeline-steps">
+              <div class="step-item">
+                <div class="step-header">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h4>Tratamento de Zeros</h4>
+                    <p>Limpeza dos Dados</p>
+                  </div>
+                </div>
+                <div class="step-details">
+                  <div class="step-percentage">
+                    Remoção de valores zero/nulos inválidos
+                  </div>
+                  <div class="step-explanation">
+                    Identifica e remove registros com valores biologicamente
+                    impossíveis
+                  </div>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-header">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h4>Divisão Estratificada</h4>
+                    <p>Treino, Validação, Teste</p>
+                  </div>
+                </div>
+                <div class="step-details">
+                  <div class="step-percentage">
+                    60% Treino • 20% Validação • 20% Teste
+                  </div>
+                  <div class="step-explanation">
+                    Mantém proporção das classes em cada conjunto
+                  </div>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-header">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h4>Remoção de Outliers</h4>
+                    <p>Método IQR</p>
+                  </div>
+                </div>
+                <div class="step-details">
+                  <div class="step-formula">
+                    IQR = Q3 - Q1<br />Outliers: < Q1 - 1.5×IQR ou > Q3 +
+                    1.5×IQR
+                  </div>
+                  <div class="step-explanation">
+                    Remove valores extremos que podem distorcer o modelo
+                  </div>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-header">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <h4>Balanceamento de Classes</h4>
+                    <p>Técnica SMOTE</p>
+                  </div>
+                </div>
+                <div class="step-details">
+                  <div class="step-percentage">65% → 50% cada classe</div>
+                  <div class="step-explanation">
+                    Synthetic Minority Oversampling TEchnique - gera exemplos
+                    sintéticos da classe minoritária
+                  </div>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-header">
+                  <div class="step-number">5</div>
+                  <div class="step-content">
+                    <h4>Normalização dos Dados</h4>
+                    <p>Z-Score</p>
+                  </div>
+                </div>
+                <div class="step-details">
+                  <div class="step-formula">Z = (X - μ) / σ</div>
+                  <div class="step-explanation">
+                    Padroniza features para média = 0 e desvio = 1
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="crisp-dm-container">
-              <div class="crisp-dm-image">
-                <img
-                  src="../assets/CRISP-DM.png"
-                  alt="Figura 22 - Ciclo de vida da mineração de dados (CRISP-DM)"
-                  class="crisp-dm-diagram"
-                />
-                <p class="image-caption">
-                  Figura 22 - Ciclo de vida da mineração de dados (CRISP-DM)
-                </p>
+            <div class="pipeline-visual">
+              <span>Dados</span>
+              <span class="pipeline-arrow">→</span>
+              <span>Limpeza</span>
+              <span class="pipeline-arrow">→</span>
+              <span>Divisão</span>
+              <span class="pipeline-arrow">→</span>
+              <span>Outliers</span>
+              <span class="pipeline-arrow">→</span>
+              <span>Balanceamento</span>
+              <span class="pipeline-arrow">→</span>
+              <span>Normalização</span>
+              <span class="pipeline-arrow">→</span>
+              <span>Modelo</span>
+            </div>
+
+            <div class="tools-used">
+              <div class="tools-title">Ferramentas Utilizadas</div>
+              <div class="tools-icons">
+                <div class="tool-item">
+                  <img
+                    src="../assets/PYTHON.svg"
+                    alt="Python"
+                    class="tool-icon"
+                  />
+                  <span>Python</span>
+                </div>
+                <div class="tool-item">
+                  <img
+                    src="../assets/JUPYTER.svg"
+                    alt="Jupyter Notebook"
+                    class="tool-icon"
+                  />
+                  <span>Jupyter Notebook</span>
+                </div>
+                <div class="tool-item">
+                  <img
+                    src="../assets/SCIKIT.svg"
+                    alt="scikit-learn"
+                    class="tool-icon"
+                  />
+                  <span>scikit-learn</span>
+                </div>
+              </div>
+              <div class="tools-desc">
+                Toda a esteira de aprendizado foi desenvolvida em
+                <strong>Jupyter Notebook</strong>, utilizando
+                <strong>Python</strong> e a biblioteca
+                <strong>scikit-learn</strong> para modelagem e
+                pré-processamento.
               </div>
             </div>
           </div>

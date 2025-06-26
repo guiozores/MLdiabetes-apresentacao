@@ -3,153 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slide 28 - Análise dos Resultados</title>
+    <title>Slide 47a - Perfis Sintéticos para Validação</title>
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="slide-28.css" />
   </head>
   <body>
     <div class="presentation-container">
       <div class="slide-content">
-        <h2 class="slide-title">Pré-processamento de Dados</h2>
-        <h3 class="slide-subtitle">Análise dos Resultados</h3>
+        <h2 class="slide-title">Análise Qualitativa</h2>
+        <h3 class="slide-subtitle">Perfis Sintéticos para Validação</h3>
 
-        <div class="results-analysis-grid-enhanced">
-          <div class="analysis-column">
-            <div class="analysis-section-enhanced">
-              <div class="method-header knn-header">
-                <h4>K-Nearest Neighbors (KNN)</h4>
-                <span class="method-tag">Dados Homogêneos</span>
-              </div>
-              <div class="analysis-content-enhanced">
-                <div class="findings-group">
-                  <div class="finding-positive">
-                    <div class="status-icon positive">✓</div>
-                    <span
-                      >Distribuição plausível, eliminou zeros sem criar outliers
-                      artificiais</span
-                    >
-                  </div>
-                  <div class="finding-positive">
-                    <div class="status-icon positive">✓</div>
-                    <span>Boa homogeneidade em SkinThickness</span>
-                  </div>
-                </div>
-                <div class="findings-group">
-                  <div class="finding-negative">
-                    <div class="status-icon negative">✗</div>
-                    <span
-                      >Não alterou significativamente a importância das
-                      features</span
-                    >
-                  </div>
-                </div>
-                <div class="method-conclusion rejected">
-                  <strong>Resultado:</strong> Descartado - Sem benefício real
-                </div>
-              </div>
-            </div>
-
-            <div class="analysis-section-enhanced">
-              <div class="method-header median-header">
-                <h4>Imputação por Mediana</h4>
-                <span class="method-tag">Distorção Artificial</span>
-              </div>
-              <div class="analysis-content-enhanced">
-                <div class="findings-group">
-                  <div class="finding-negative">
-                    <div class="status-icon negative">✗</div>
-                    <span
-                      >Pico artificial no valor da mediana (visível nos
-                      histogramas)</span
-                    >
-                  </div>
-                  <div class="finding-negative">
-                    <div class="status-icon negative">✗</div>
-                    <span>Linha horizontal constante na dispersão</span>
-                  </div>
-                  <div class="finding-negative">
-                    <div class="status-icon negative">✗</div>
-                    <span
-                      >Redução da variância natural do conjunto de dados</span
-                    >
-                  </div>
-                </div>
-                <div class="method-conclusion rejected">
-                  <strong>Resultado:</strong> Rejeitado - Distorce distribuição
-                  original
-                </div>
-              </div>
-            </div>
+        <div class="synthetic-profiles">
+          <div class="intro-text">
+            <p>
+              Para validação dos modelos, foram criados
+              <strong>6 perfis sintéticos</strong>
+              representando um espectro contínuo de risco para diabetes. Estes
+              perfis serão utilizados posteriormente para análise de
+              plausibilidade dos modelos gerados.
+            </p>
           </div>
 
-          <div class="analysis-column">
-            <div class="analysis-section-enhanced">
-              <div class="method-header regression-header">
-                <h4>Regressão Linear</h4>
-                <span class="method-tag">Sofisticação Desnecessária</span>
-              </div>
-              <div class="analysis-content-enhanced">
-                <div class="findings-group">
-                  <div class="finding-positive">
-                    <div class="status-icon positive">✓</div>
-                    <span>Distribuições visualmente coerentes</span>
-                  </div>
-                </div>
-                <div class="findings-group">
-                  <div class="finding-negative">
-                    <div class="status-icon negative">✗</div>
-                    <span>Padrão quase idêntico aos dados originais</span>
-                  </div>
-                  <div class="finding-negative">
-                    <div class="status-icon negative">✗</div>
-                    <span>Não justifica esforço de implementação</span>
-                  </div>
-                </div>
-                <div class="method-conclusion rejected">
-                  <strong>Resultado:</strong> Descartado - Sem melhoria
-                  estrutural
-                </div>
-              </div>
+          <div class="profiles-table">
+            <div class="table-header">
+              <div class="header-cell">Perfil de Risco</div>
+              <div class="header-cell">Pregnancies</div>
+              <div class="header-cell">Glucose</div>
+              <div class="header-cell">Blood Pressure</div>
+              <div class="header-cell">Skin Thickness</div>
+              <div class="header-cell">BMI</div>
+              <div class="header-cell">DPF</div>
+              <div class="header-cell">Age</div>
             </div>
 
-            <div class="analysis-section-enhanced">
-              <div class="method-header exclusion-header">
-                <h4>Exclusão de Dados</h4>
-                <span class="method-tag">Perda Crítica</span>
-              </div>
-              <div class="analysis-content-enhanced">
-                <div class="findings-group">
-                  <div class="finding-negative">
-                    <div class="status-icon negative">✗</div>
-                    <span
-                      >Remoção de Insulin (29,6%) e SkinThickness (48,7%)</span
-                    >
-                  </div>
-                  <div class="finding-negative">
-                    <div class="status-icon negative">✗</div>
-                    <span>Redução substancial do volume amostral</span>
-                  </div>
-                  <div class="finding-negative">
-                    <div class="status-icon negative">✗</div>
-                    <span>Diminuição do poder estatístico</span>
-                  </div>
-                </div>
-                <div class="method-conclusion rejected">
-                  <strong>Resultado:</strong> Rejeitado - Perda crítica de
-                  informação
-                </div>
-              </div>
+            <div class="table-row severe">
+              <div class="cell profile-name">Diabético Severo</div>
+              <div class="cell">4</div>
+              <div class="cell">200</div>
+              <div class="cell">100</div>
+              <div class="cell">50</div>
+              <div class="cell">40.0</div>
+              <div class="cell">1.50</div>
+              <div class="cell">65</div>
             </div>
-          </div>
-        </div>
 
-        <div class="final-decision-banner">
-          <div class="decision-icon">🎯</div>
-          <div class="decision-content">
-            <strong>Decisão Final:</strong>
-            <span
-              >Prosseguir com <strong>Dados Brutos</strong>
-              </span>
+            <div class="table-row moderate">
+              <div class="cell profile-name">Diabético Moderado</div>
+              <div class="cell">2</div>
+              <div class="cell">160</div>
+              <div class="cell">85</div>
+              <div class="cell">35</div>
+              <div class="cell">32.0</div>
+              <div class="cell">0.80</div>
+              <div class="cell">50</div>
+            </div>
+
+            <div class="table-row pre-high">
+              <div class="cell profile-name">Pré-Diabético Alto</div>
+              <div class="cell">4</div>
+              <div class="cell">124</div>
+              <div class="cell">78</div>
+              <div class="cell">30</div>
+              <div class="cell">31.0</div>
+              <div class="cell">0.60</div>
+              <div class="cell">45</div>
+            </div>
+
+            <div class="table-row pre-low">
+              <div class="cell profile-name">Pré-Diabético Baixo</div>
+              <div class="cell">2</div>
+              <div class="cell">115</div>
+              <div class="cell">75</div>
+              <div class="cell">25</div>
+              <div class="cell">30.0</div>
+              <div class="cell">0.40</div>
+              <div class="cell">40</div>
+            </div>
+
+            <div class="table-row low-risk">
+              <div class="cell profile-name">Risco Baixo</div>
+              <div class="cell">0</div>
+              <div class="cell">99</div>
+              <div class="cell">70</div>
+              <div class="cell">22</div>
+              <div class="cell">29.0</div>
+              <div class="cell">0.30</div>
+              <div class="cell">35</div>
+            </div>
+
+            <div class="table-row healthy">
+              <div class="cell profile-name">Saudável</div>
+              <div class="cell">0</div>
+              <div class="cell">85</div>
+              <div class="cell">65</div>
+              <div class="cell">18</div>
+              <div class="cell">22.0</div>
+              <div class="cell">0.15</div>
+              <div class="cell">25</div>
+            </div>
           </div>
         </div>
       </div>

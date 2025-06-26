@@ -3,125 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slide 12 - SMOTE | Além das Métricas</title>
+    <title>Slide 12 - Taxa de Diabetes por Classificação de IMC</title>
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="slide-12.css" />
   </head>
   <body>
     <div class="presentation-container">
-      <div class="slide">
-        <div class="slide-content">
-          <h2 class="slide-title">SMOTE: Equilibrando o Dataset</h2>
-          <p class="slide-subtitle">
-            Synthetic Minority Oversampling Technique
-          </p>
+      <div class="slide-content">
+        <h2 class="slide-title">Análise Exploratória de Dados</h2>
+        <h3 class="slide-subtitle">
+          Taxa de Diabetes por Classificação de IMC
+        </h3>
 
-          <div class="smote-comparison">
-            <!-- Dataset Original -->
-            <div class="dataset-panel original">
-              <div class="panel-header">
-                <h3>🔴 Dataset Original</h3>
-                <div class="stats">
-                  <span class="stat diabetes">Diabético: 20 (20%)</span>
-                  <span class="stat normal">Normal: 80 (80%)</span>
-                </div>
-              </div>
+        <div class="aed-image-content">
+          <div class="image-container-large">
+            <img
+              src="../assets/AED-08.png"
+              alt="Taxa de Diabetes por classificação de BMI/IMC"
+              class="aed-image"
+            />
+            <p class="image-source">Fonte: elaborado pelo autor</p>
+          </div>
 
-              <div class="visualization">
-                <div class="scatter-plot" id="originalPlot">
-                  <div class="plot-title">Distribuição Desbalanceada</div>
-                  <div class="plot-area">
-                    <!-- Pontos serão gerados via JavaScript -->
-                  </div>
-                  <div class="legend">
-                    <div class="legend-item">
-                      <span class="legend-dot normal"></span>
-                      <span>Não Diabético</span>
-                    </div>
-                    <div class="legend-item">
-                      <span class="legend-dot diabetes"></span>
-                      <span>Diabético</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="key-points">
+            <div class="point-item">
+              <span class="point-bullet">•</span>
+              <p>
+                <strong>Progressão evidente:</strong> 6,9% (peso normal) → 56,1%
+                (obesidade grau III)
+              </p>
             </div>
-
-            <!-- Seta de Transformação -->
-            <div class="transformation-arrow">
-              <div class="arrow-container">
-                <div class="smote-icon">⚡</div>
-                <div class="arrow">→</div>
-                <div class="smote-label">SMOTE</div>
-              </div>
-
-              <div class="algorithm-steps">
-                <div class="step">
-                  <span class="step-num">1</span>
-                  <span>Seleciona ponto minoritário</span>
-                </div>
-                <div class="step">
-                  <span class="step-num">2</span>
-                  <span>Encontra 5 vizinhos</span>
-                </div>
-                <div class="step">
-                  <span class="step-num">3</span>
-                  <span>Interpola novo ponto</span>
-                </div>
-                <div class="step">
-                  <span class="step-num">4</span>
-                  <span>Equilibra classes</span>
-                </div>
-              </div>
+            <div class="point-item">
+              <span class="point-bullet">•</span>
+              <p>
+                <strong>Ponto crítico:</strong> obesidade grau I já apresenta
+                45,1% de taxa de diabetes
+              </p>
             </div>
-
-            <!-- Dataset Balanceado -->
-            <div class="dataset-panel balanced">
-              <div class="panel-header">
-                <h3>✅ Dataset Balanceado</h3>
-                <div class="stats">
-                  <span class="stat diabetes">Diabético: 80 (50%)</span>
-                  <span class="stat normal">Normal: 80 (50%)</span>
-                </div>
-              </div>
-
-              <div class="visualization">
-                <div class="scatter-plot" id="balancedPlot">
-                  <div class="plot-title">Distribuição Balanceada</div>
-                  <div class="plot-area">
-                    <!-- Pontos serão gerados via JavaScript -->
-                  </div>
-                  <div class="legend">
-                    <div class="legend-item">
-                      <span class="legend-dot normal"></span>
-                      <span>Não Diabético</span>
-                    </div>
-                    <div class="legend-item">
-                      <span class="legend-dot diabetes"></span>
-                      <span>Diabético Original</span>
-                    </div>
-                    <div class="legend-item">
-                      <span class="legend-dot synthetic"></span>
-                      <span>Diabético Sintético</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="point-item">
+              <span class="point-bullet">•</span>
+              <p>
+                <strong>Relação clara:</strong> IMC como forte preditor do risco
+                de diabetes
+              </p>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="navigation">
+        <a href="slide-11.html" class="nav-button">← Anterior</a>
+        <a href="../index.html" class="nav-button">Menu</a>
+        <a href="slide-13.html" class="nav-button">Próximo →</a>
+      </div>
     </div>
-
-    <!-- Navegação -->
-    <div class="navigation">
-      <a href="slide-11.html" class="nav-button">← Anterior</a>
-      <a href="../index.html" class="nav-button">Menu</a>
-      <a href="slide-13.html" class="nav-button">Próximo →</a>
-    </div>
-
-    <a href="../index.html" class="home-button">🏠</a>
-
-    <script src="slide-12.js"></script>
   </body>
 </html>

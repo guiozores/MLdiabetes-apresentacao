@@ -1,87 +1,10 @@
-/* =======================================================
-   SLIDE 2 – O PROBLEMA
-   ======================================================= */
+/* Slide 3: Objetivo e Justificativa - Estilos Específicos */
 
-/* ===== LAYOUT PRINCIPAL DO BLOCO ===================== */
-.problem-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.8fr;   /* texto : gráfico (proporção mais suave) */
-  gap: 2.5rem;
-  width: 100%;
-  align-items: center;                 /* centraliza verticalmente */
-  margin-top: 2rem;
-}
-
-/* ===== CONTÊINER DO GRÁFICO ========================== */
-.obesity-chart-container {
-  background: var(--surface);
-  padding: 1.6rem 1.8rem;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  align-items: center;                 /* centraliza tudo dentro */
-  gap: 1.4rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04); /* leve profundidade */
-}
-
-/* ===== MINI-GRÁFICO SVG ============================== */
-.mini-chart-wrapper {
-  width: 100%;
-  max-width: 240px;                   /* tamanho equilibrado */
-  margin-inline: auto;
-}
-
-.mini-chart {
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
-.chart-year {
-  font-size: 0.9rem;
-  fill: var(--text-secondary);
-  font-family: "Inter", "SF Pro Display", sans-serif;
-}
-
-.chart-value {
-  font-size: 0.95rem;
-  font-weight: 600;
-  fill: #007aff;
-  font-family: "Inter", "SF Pro Display", sans-serif;
-}
-
-/* ===== RESUMO DA TENDÊNCIA =========================== */
-.chart-summary {
-  display: flex;
-  align-items: center;
-  justify-content: center;           /* centralizado */
-  gap: 0.6rem;
-  background: rgba(0, 122, 255, 0.08);
-  padding: 0.8rem 1.2rem;
-  border-radius: 12px;
-  border-left: 4px solid #007aff;
-}
-
-.trend-icon {
-  font-size: 1.2rem;
-  color: #007aff;
-}
-
-.trend-text {
-  font-size: 0.93rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-/* ===== RESPONSIVO ==================================== */
-@media (max-width: 768px) {
-  .problem-layout {
-    grid-template-columns: 1fr;       /* empilha colunas */
-    gap: 2rem;
-  }
-
-  .mini-chart-wrapper {
-    max-width: 200px;                 /* ligeiramente menor no mobile */
-  }
-}
+/* Este slide usa apenas estilos globais compartilhados:
+   - .objective-grid
+   - .justification-box, .objective-box
+   - .section-header
+   - .bullet-points, .bullet-point
+   
+   Nenhum estilo específico necessário.
+*/

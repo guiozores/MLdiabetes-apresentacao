@@ -1,53 +1,142 @@
-/* Slide 26 - Diferenças na Distribuição por Processamento */
+/* Slide 39 - Resultados de Treinamento 04 */
 
-.full-image-container {
-  margin: 40px 0;
+body {
+  overflow-y: auto;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  flex: 1;
+}
+
+.image-container {
   text-align: center;
-  padding: 20px;
-  background: #f8f9fa;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+}
+
+.main-image {
+  max-width: 95%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.full-size-image {
-  width: 100%;
-  max-width: 900px;
-  height: auto;
+.image-source {
+  margin-top: 8px;
+  font-size: 0.8em;
+  color: #666;
+  font-style: italic;
+}
+
+.description-section {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.description-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  background: #f8f9fa;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  border-top: 3px solid #007acc;
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 100px;
 }
 
-.full-size-image:hover {
-  transform: scale(1.02);
+.description-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.description-bullet {
+  color: #007acc;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.description-item p {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 0.85em;
+  text-align: justify;
+}
+
+.description-item strong {
+  color: #333;
+  font-weight: 600;
 }
 
 /* Responsividade */
 @media (max-width: 1024px) {
-  .full-image-container {
-    margin: 30px 0;
-    padding: 15px;
+  .description-content {
+    flex-direction: column;
+    gap: 15px;
   }
 
-  .full-size-image {
-    max-width: 100%;
+  .description-item {
+    min-width: 200px;
+    max-width: none;
   }
 }
 
 @media (max-width: 768px) {
-  .full-image-container {
+  .main-content {
+    gap: 15px;
     margin: 20px 0;
-    padding: 10px;
+  }
+
+  .description-content {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .main-image {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+
+  .description-item p {
+    font-size: 0.8em;
   }
 }
 
 @media (max-width: 480px) {
-  .full-image-container {
-    margin: 15px 0;
-    padding: 8px;
+  .main-content {
+    gap: 10px;
   }
 
-  .full-size-image {
-    border-radius: 4px;
+  .description-content {
+    padding: 10px;
+  }
+
+  .main-image {
+    max-width: 100%;
   }
 }
